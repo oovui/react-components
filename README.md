@@ -2,7 +2,7 @@
 
 a pretty ui component library built on  react
 
-# install
+# install ---
 
 `npm install @oovui/react`
 
