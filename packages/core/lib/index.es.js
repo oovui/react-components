@@ -32,7 +32,7 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 5px 10px;\n  border: solid 1px #aaa;\n  border-radius: 3px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 5px 10px;\n  border: solid 1px #b20b0b;\n  border-radius: 3px;\n  outline:none;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
