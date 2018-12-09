@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"./.docz/app/imports.js":function(n,i,e){"use strict";e.r(i),e.d(i,"imports",function(){return o});var o={"index.mdx":function(){return Promise.all([e.e(0),e.e(2)]).then(e.bind(null,"./index.mdx"))}}}},0,[0,2]]);
-//# sourceMappingURL=4.fc9d1daf4d11e538361f.js.map

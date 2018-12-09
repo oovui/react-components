@@ -1,10 +1,10 @@
 # oovui-react
 
-a pretty ui component library built on  react
+oovui react  components library.
 
-# install ---
+# install 
 
-`npm install @oovui/react`
+`npm install @oovui/core`
 
 # usage
 
@@ -12,7 +12,7 @@ a pretty ui component library built on  react
 ```js
 //App.js
 import React from 'react'
-import {Grid } from '@oovui/react';
+import {Grid } from '@oovui/core';
 const { Row, Col } = Grid;
 class App extends React.Component {
   render () {
@@ -51,7 +51,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 # Docs
 
-[中文文档](http://react.oovui.com)
+[文档](https://oovui.netlify.com/)
 
 
 # 相关项目

@@ -12,3 +12,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 
+#docz files
+.docz
+
+
