@@ -1,0 +1,24 @@
+{
+  "name": "@oovui/core",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "/lib/index.cjs",
+  "module": "/lib/index.es",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  }
+}

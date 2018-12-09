@@ -1,0 +1,42 @@
+{
+  "config": {
+    "title": "React components",
+    "description": "Oovui react components docs site",
+    "menu": [],
+    "ordering": "descending",
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {
+      "colors": {
+        "primary": "tomato"
+      },
+      "styles": {
+        "h1": {
+          "fontSize": 30
+        }
+      }
+    },
+    "dest": "/dist"
+  },
+  "entries": {
+    "index.mdx": {
+      "name": "入门",
+      "route": "/",
+      "id": "91149a4106ab27ef746308b41227aca8",
+      "filepath": "index.mdx",
+      "link": null,
+      "slug": "index",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        }
+      ]
+    }
+  }
+}
