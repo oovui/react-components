@@ -1,9 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from 'prop-types'
+import  styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Col from './Col';
+import { pxToNumber } from '../utils/index';
 
-const Row = (props)=>{
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  ${Col}{
+    padding-left:${ p=>pxToNumber(p.gutter) / 2}px;
+    padding-right:${ p=>pxToNumber(p.gutter) / 2}px
+  }
+`;
 
+Row.displayName = 'Row';
+Row.propTypes = {
+  children:PropTypes.node,
+  gutter:PropTypes.string,
+  className:PropTypes.string
 }
-
-export default Row;
+Row.defaultProps = {
+  gutter:'0'
+}
+export default Row

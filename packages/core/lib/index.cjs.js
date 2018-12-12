@@ -65,9 +65,70 @@ Button.propTypes = {
 
 // import Button from './Button';
 
-var Row = function Row(props) {};
+function _templateObject$1() {
+  var data = _taggedTemplateLiteral(["\n  flex-grow:0;\n  flex-shrink:1;\n  flex-basis: ", ";\n  margin-left: ", "\n"]);
 
-var Col = function Col(props) {};
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Col = styled.div(_templateObject$1(), function (p) {
+  return p.span / 24 * 100 + '%';
+}, function (p) {
+  return p.offset / 24 * 100 + "%";
+});
+Col.displayName = 'Col';
+Col.propTypes = {
+  children: PropTypes.node,
+  span: PropTypes.number,
+  offset: PropTypes.number,
+  className: PropTypes.string
+};
+Col.defaultProps = {
+  span: 0,
+  offset: 0
+};
+
+var pxToNumber = function pxToNumber(pxStr) {
+  var number = 0;
+  pxStr = pxStr.trim();
+
+  if (pxStr.endsWith("px")) {
+    number = pxStr.slice(0, pxStr.length - 2);
+  } else {
+    number = pxStr;
+  } //Object.is(NaN,NaN)=>true
+
+
+  number = Object.is(Number(number), NaN) ? 0 : Number(number);
+  return Number(number);
+};
+
+function _templateObject$2() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  \n  ", "{\n    padding-left:", "px;\n    padding-right:", "px\n  }\n"]);
+
+  _templateObject$2 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Row = styled.div(_templateObject$2(), Col, function (p) {
+  return pxToNumber(p.gutter) / 2;
+}, function (p) {
+  return pxToNumber(p.gutter) / 2;
+});
+Row.displayName = 'Row';
+Row.propTypes = {
+  children: PropTypes.node,
+  gutter: PropTypes.string,
+  className: PropTypes.string
+};
+Row.defaultProps = {
+  gutter: '0'
+};
 
 var index = {
   Row: Row,
