@@ -1,0 +1,34 @@
+---
+name: 快速上手
+order: 99
+route: /getting-started
+---
+
+
+import { Playground } from 'docz'
+import { Button } from '@oovui/core'
+
+# 快速上手
+
+## 安装 
+
+Install `@oovui/core` and `styled-components` from npm:
+
+`npm install @oovui/core styled-components`
+
+## 基本用法
+
+
+```js
+import { Button } from '@oovui/core'
+
+const App = () => (
+  <Button primary>Hello world!</Button>
+)
+
+export default App
+```
+
+<Playground>
+  <Button text="Hello world!"/>
+</Playground>

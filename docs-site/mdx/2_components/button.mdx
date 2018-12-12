@@ -1,0 +1,47 @@
+---
+name: Button 按钮
+menu: Components
+order: 70
+route: /components/button
+---
+
+import { Playground ,PropsTable } from 'docz'
+import { Button } from '@oovui/core'
+
+
+# Button
+
+## 属性
+
+<PropsTable of={ Button } />
+
+## 基本用法
+
+<Playground>
+  <Button text="Second Button"/>
+</Playground>
+
+<Playground>
+  {
+    ()=>(
+
+      <Button text="Third Button"/>
+    )
+  }
+  
+</Playground>
+
+<Playground>
+  {
+    ()=>{
+      const text = "My Button"
+      return (
+         <div>
+           <Button text={ text }/>
+           <Button text={ text }/>
+         </div>
+      )    
+    }
+  }
+  
+</Playground>
