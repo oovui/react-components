@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -32,7 +33,7 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 5px 10px;\n  border: solid 1px #b20b0b;\n  border-radius: 3px;\n  outline:none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 5px 10px;\n  border: solid 1px #b20b0b;\n  border-radius: 30px;\n  outline:none;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48,6 +49,23 @@ var Button = function Button(props) {
   }), props.text);
 };
 
-// export { default } from './Button'
+Button.propTypes = {
+  /** 按钮的值 */
+  text: PropTypes.string,
 
-export { Button };
+  /** 原生class */
+  className: PropTypes.string
+};
+
+// import Button from './Button';
+
+var Row = function Row(props) {};
+
+var Col = function Col(props) {};
+
+var index = {
+  Row: Row,
+  Col: Col
+};
+
+export { Button, index as Grid };

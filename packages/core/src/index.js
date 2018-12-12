@@ -1,7 +1,2 @@
-import Button from "./button/index";
-// import Input from "./input/index";
-
-export {
-  Button
-  // ,Input
-}
+export { default as Button } from './button/index';
+export { default as Grid } from './grid/index';

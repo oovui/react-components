@@ -9,6 +9,7 @@
     "watch": "rollup -c -w"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "styled-components": "^4.1.2"
   },

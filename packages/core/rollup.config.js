@@ -17,7 +17,8 @@ module.exports = {
   external: [
     "react",
     "react-dom",
-    "styled-components"
+    "styled-components",
+    "prop-types"
   ],
   plugins: [
     babel({
