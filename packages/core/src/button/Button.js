@@ -21,6 +21,7 @@ const Button = (props) => {
     </ButtonWrapper>
   )
 }
+
 Button.propTypes = {
    /** 按钮的值 */
   text:PropTypes.string,

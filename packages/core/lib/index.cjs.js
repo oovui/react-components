@@ -74,11 +74,16 @@ function _templateObject$1() {
 
   return data;
 }
-var Col = styled.div(_templateObject$1(), function (p) {
+var ColWrapper = styled.div(_templateObject$1(), function (p) {
   return p.span / 24 * 100 + '%';
 }, function (p) {
   return p.offset / 24 * 100 + "%";
 });
+
+var Col = function Col(props) {
+  return React.createElement(ColWrapper, props);
+};
+
 Col.displayName = 'Col';
 Col.propTypes = {
   children: PropTypes.node,
@@ -115,11 +120,16 @@ function _templateObject$2() {
 
   return data;
 }
-var Row = styled.div(_templateObject$2(), Col, function (p) {
+var RowWrapper = styled.div(_templateObject$2(), ColWrapper, function (p) {
   return pxToNumber(p.gutter) / 2;
 }, function (p) {
   return pxToNumber(p.gutter) / 2;
 });
+
+var Row = function Row(props) {
+  return React.createElement(RowWrapper, props);
+};
+
 Row.displayName = 'Row';
 Row.propTypes = {
   children: PropTypes.node,
@@ -130,10 +140,6 @@ Row.defaultProps = {
   gutter: '0'
 };
 
-var index = {
-  Row: Row,
-  Col: Col
-};
-
 exports.Button = Button;
-exports.Grid = index;
+exports.Row = Row;
+exports.Col = Col;
