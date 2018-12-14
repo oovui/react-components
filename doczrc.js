@@ -1,9 +1,13 @@
+import { padding } from "polished";
 
 export default {
   title: 'React components',
   description: 'Oovui react components docs site',
   src:'./docs-site',
   dest: '/docs-dist',
+  indexHtml: './docs-site/index.html',
+  repository: 'https://github.com/oovui/react-components',
+  ordering: 'descending',  //ascending
   //base:"/"
   //propsParser:false,
   files: '**/*.{markdown,mdx}',

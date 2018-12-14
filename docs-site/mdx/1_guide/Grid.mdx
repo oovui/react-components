@@ -5,6 +5,46 @@ order: 86
 route: /guide/grid
 ---
 
+
+import { Playground,PropsTable } from 'docz'
+import { Row,Col } from '@oovui/core'
+
+
 # Grid 布局
 
 基于css3 flexbox,注意兼容性
+
+
+# 基本用法
+<Playground>
+   <Row gutter = "10" >
+      <Col span= {24}>Col</Col>
+    </Row>
+    <Row gutter = "10" >
+      <Col span= {12}>Col</Col>
+      <Col span= {12}>Col</Col>
+    </Row>
+    <Row gutter = "10" >
+      <Col span= {8}>Col</Col>
+      <Col span= {8}>Col</Col>
+      <Col span= {8}>Col</Col>
+    </Row>
+    <Row gutter = "10" >
+      <Col span= {6}>Col</Col>
+      <Col span= {6}>Col</Col>
+      <Col span= {6}>Col</Col>
+      <Col span= {6}>Col</Col>
+    </Row>
+</Playground>
+
+# 属性
+
+Row:
+<PropsTable of={Row} />
+
+Col:
+<PropsTable of={Col} />
+
+
+
+
