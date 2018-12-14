@@ -16,25 +16,94 @@ import { Row,Col } from '@oovui/core'
 
 
 # 基本用法
+```jsx
+<Row gutter="10" >
+  <Col span={12}>Col</Col>
+  <Col span={6} offset={6}>Col</Col>
+</Row>
+```
+
 <Playground>
-   <Row gutter = "10" >
-      <Col span= {24}>Col</Col>
-    </Row>
-    <Row gutter = "10" >
-      <Col span= {12}>Col</Col>
-      <Col span= {12}>Col</Col>
-    </Row>
-    <Row gutter = "10" >
-      <Col span= {8}>Col</Col>
-      <Col span= {8}>Col</Col>
-      <Col span= {8}>Col</Col>
-    </Row>
-    <Row gutter = "10" >
-      <Col span= {6}>Col</Col>
-      <Col span= {6}>Col</Col>
-      <Col span= {6}>Col</Col>
-      <Col span= {6}>Col</Col>
-    </Row>
+  {() => {
+    const stylesLight = {background: "lightgrey",textAlign:"center"};
+    const stylesDark = {background: "darkgray",textAlign:"center"};
+    const styleRow = {marginBottom: "5px"};
+    return (
+      <div>
+        <Row style={styleRow}>
+          <Col span={24}><div style={stylesLight}> span 24,100% </div></Col>
+        </Row>
+        <Row style={styleRow}>
+          <Col span={12}><div style={stylesLight}> span 12,50% </div> </Col>
+          <Col span={12}><div style={stylesDark}> span 12,50% </div> </Col>
+        </Row>
+        <Row style={styleRow}>
+          <Col span={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesDark}>  span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesDark}>  span 6,25% </div> </Col>
+        </Row>
+        <Row style={styleRow}>
+          <Col span={4}><div style={stylesLight}> span 4,16.667% </div> </Col>
+          <Col span={4}><div style={stylesDark}>  span 4,16.667% </div> </Col>
+          <Col span={4}><div style={stylesLight}> span 4,16.667% </div> </Col>
+          <Col span={4}><div style={stylesDark}>  span 4,16.667% </div> </Col>
+          <Col span={4}><div style={stylesLight}> span 4,16.667% </div> </Col>
+          <Col span={4}><div style={stylesDark}>  span 4,16.667% </div> </Col>
+        </Row>
+
+      </div>
+    )}}
+</Playground>
+
+
+# 间距 gutter
+gutter 设置在Row 组件属性上。设置所有子Col的间隔。值为字符串，如`10px`(或`10`)
+
+<Playground>
+  {() => {
+    const stylesLight = {background: "lightgrey",textAlign:"center"};
+    const stylesDark = {background: "darkgray",textAlign:"center"};
+    const styleRow = {marginBottom: "5px"};
+    return (
+      <div>
+        <Row style={styleRow} gutter="10">
+          <Col span={12}><div style={stylesLight}> span 12,50% </div> </Col>
+          <Col span={12}><div style={stylesDark}> span 12,50% </div> </Col>
+        </Row>
+        <Row style={styleRow} gutter="10">
+          <Col span={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesDark}>  span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesDark}>  span 6,25% </div> </Col>
+        </Row>
+      </div>
+    )}}
+</Playground>
+
+
+
+# 偏移 offset
+offset 设置在Col组件属性上。可以将列向右侧偏。例如，offset={4} 将元素向右侧偏移了 4个列column的宽度，相当于marginLeft。
+
+<Playground>
+  {() => {
+    const stylesLight = {background: "lightgrey",textAlign:"center"};
+    const stylesDark = {background: "darkgray",textAlign:"center"};
+    const styleRow = {marginBottom: "5px"};
+    return (
+      <div>
+        <Row style={styleRow} gutter="10">
+          <Col span={12}><div style={stylesLight}> span 12,50% </div> </Col>
+          <Col span={6} offset={6}><div style={stylesDark}> span 12,50% </div> </Col>
+        </Row>
+        <Row style={styleRow} gutter="10">
+          <Col span={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6} offset={6}><div style={stylesLight}> span 6,25% </div> </Col>
+          <Col span={6}><div style={stylesDark}>  span 6,25% </div> </Col>
+        </Row>
+      </div>
+    )}}
 </Playground>
 
 # 属性
