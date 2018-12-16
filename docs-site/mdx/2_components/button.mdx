@@ -11,7 +11,38 @@ import { Button } from '@oovui/core'
 
 # Button
 
+Button 组件用于生成一个原生的button标签。
+
+# 按钮类型
+通过`type`属性指定按钮的类型。共有5中类型。
+品牌按钮(primary),信息按钮(info),成功按钮(success),警告按钮(warning),危险或错误按钮(danger/error),取消操作按钮(cancel).
+
+若不指定type 属性，默认为 primary 类型.
+
+# 图标及形状
+
+- 当需要在 Button 内嵌入 Icon 时，建议直接作为children 属性。可以放置在文字左边或右边
+- 通过设置shape属性为circle，可将按钮置为圆的形状。
+
+# 按钮状态：ghost
+
+添加 ghost 属性即可让按钮处于幽灵状态，带有虚线边框，透明背景，同时字体颜色也会有改变
+
+
+
+# 按钮状态：不可用
+添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
+
+# 按钮状态：加载中
+
+添加 loading 属性即可让按钮处于加载状态，最后两个按钮演示点击后进入加载状态。
+
+
+
 ## 属性
+
+通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：type -> shape -> size -> loading -> disabled 
+
 
 <PropsTable of={ Button } />
 
