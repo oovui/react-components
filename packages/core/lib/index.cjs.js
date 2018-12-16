@@ -5,26 +5,9 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var React = _interopDefault(require('react'));
-var styled = _interopDefault(require('styled-components'));
+var styled = require('styled-components');
+var styled__default = _interopDefault(styled);
 var PropTypes = _interopDefault(require('prop-types'));
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
 
 function _taggedTemplateLiteral(strings, raw) {
   if (!raw) {
@@ -38,8 +21,28 @@ function _taggedTemplateLiteral(strings, raw) {
   }));
 }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  background-color: #ffffff;\n  color: ", ";\n  border: ", ";\n  &:hover {\n    color: ", ";\n    border: ", ";\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  background-color: ", ";\n  color: #ffffff;\n  border: none;\n  &:hover {\n    background-color: ", ";\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 5px 10px;\n  border: solid 1px #b20b0b;\n  border-radius: 30px;\n  outline:none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-radius: 4px;\n  font-size: 12px;\n  font-family: Arial;\n  font-weight: 900;\n  padding: 12px 24px;\n  margin: 10px;\n  outline:none;\n  :hover {\n    cursor: pointer;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -47,23 +50,61 @@ function _templateObject() {
 
   return data;
 }
-var ButtonWrapper = styled.button(_templateObject());
+var buttonBaseStyles = styled.css(_templateObject());
+var colors = {
+  primary: '#1C76E2',
+  warning: '#E10D30',
+  default: '#155EC2',
+  success: '#12AC3F',
+  info: '#AE1DC5'
+};
+var hoverColors = {
+  primary: '#15447D',
+  warning: '#900B21',
+  default: '#0C3875',
+  success: '#0B6F29',
+  info: '#5B0D68'
+};
+var MainComponent = styled__default.button(_templateObject2(), buttonBaseStyles, function (_ref) {
+  var type = _ref.type;
+  return colors[type];
+}, function (_ref2) {
+  var type = _ref2.type;
+  return hoverColors[type];
+});
+var GhostButton = styled__default.button(_templateObject3(), buttonBaseStyles, function (_ref3) {
+  var type = _ref3.type;
+  return colors[type];
+}, function (_ref4) {
+  var type = _ref4.type;
+  return "1px solid ".concat(colors[type]);
+}, function (_ref5) {
+  var type = _ref5.type;
+  return hoverColors[type];
+}, function (_ref6) {
+  var type = _ref6.type;
+  return "1px solid ".concat(hoverColors[type]);
+});
 
-var Button = function Button(props) {
-  return React.createElement(ButtonWrapper, _extends({}, props, {
-    onClick: props.onClick
-  }), props.text);
+var Button = function Button(_ref7) {
+  var type = _ref7.type,
+      children = _ref7.children,
+      ghost = _ref7.ghost;
+  // 不传时ghost 为undefined
+  var ButtonComponent = !!ghost ? GhostButton : MainComponent;
+  return React.createElement(ButtonComponent, {
+    type: type
+  }, children);
 };
 
 Button.propTypes = {
-  /** 按钮的值 */
-  text: PropTypes.string,
-
-  /** 原生class */
-  className: PropTypes.string
+  type: PropTypes.string,
+  ghost: PropTypes.bool
 };
-
-// import Button from './Button';
+Button.defaultProps = {
+  type: 'primary',
+  ghost: false
+};
 
 function _templateObject$1() {
   var data = _taggedTemplateLiteral(["\n  flex-grow:0;\n  flex-shrink:1;\n  flex-basis: ", ";\n  margin-left: ", "\n"]);
@@ -74,7 +115,7 @@ function _templateObject$1() {
 
   return data;
 }
-var ColWrapper = styled.div(_templateObject$1(), function (p) {
+var ColWrapper = styled__default.div(_templateObject$1(), function (p) {
   return p.span / 24 * 100 + '%';
 }, function (p) {
   return p.offset / 24 * 100 + "%";
@@ -120,7 +161,7 @@ function _templateObject$2() {
 
   return data;
 }
-var RowWrapper = styled.div(_templateObject$2(), ColWrapper, function (p) {
+var RowWrapper = styled__default.div(_templateObject$2(), ColWrapper, function (p) {
   return pxToNumber(p.gutter) / 2;
 }, function (p) {
   return pxToNumber(p.gutter) / 2;
