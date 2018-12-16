@@ -6,6 +6,66 @@ route: /guide/colors
 ---
 
 
+import { Playground,PropsTable } from 'docz'
+import CenterBlcok from '../../components/CenterBlock'
+import { Row,Col } from '@oovui/core'
 
 # 颜色
-颜色
+oovui 组件的颜色主要基于antd的设计语言，只选取最基本组件需要必须的颜色。
+
+# 所有颜色
+<Playground>
+   <Row style={{'marginBottom':'5px'}} gutter="10px">
+    <Col span={6}>
+      <CenterBlcok bgcolor="#1890ff">primary: #1890ff</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#91d5ff" color="#fafafa">info:#91d5ff</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#52c41a">success:#52c41a</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#faad14">warning:#faad14</CenterBlcok>
+    </Col>
+  </Row>
+  <Row style={{'marginBottom':'5px'}}  gutter="10px">
+    <Col span={6}>
+      <CenterBlcok bgcolor="#f5222d">danger/error: #f5222d </CenterBlcok>
+    </Col>
+    <Col span={6}>
+      <CenterBlcok bgcolor="#e8e8e8" color="#676b70">cancel:#e8e8e8</CenterBlcok>
+    </Col>
+  </Row>
+</Playground>
+
+
+# Hover色彩
+<Playground>
+   <Row style={{'marginBottom':'5px'}} gutter="10px">
+    <Col span={6}>
+      <CenterBlcok bgcolor="#1890ff">primary: #1890ff</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#91d5ff" color="#fafafa">info:#91d5ff</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#52c41a">success:#52c41a</CenterBlcok>
+    </Col>
+      <Col span={6}>
+      <CenterBlcok bgcolor="#faad14">warning:#faad14</CenterBlcok>
+    </Col>
+  </Row>
+  <Row style={{'marginBottom':'5px'}}  gutter="10px">
+    <Col span={6}>
+      <CenterBlcok bgcolor="#f5222d">danger/error: #f5222d </CenterBlcok>
+    </Col>
+    <Col span={6}>
+      <CenterBlcok bgcolor="#e8e8e8" color="#676b70">cancel:#e8e8e8</CenterBlcok>
+    </Col>
+  </Row>
+</Playground>
+
+
+# 辅助色
+如字体颜色、非品牌色背景、边框、阴影、灰色等

@@ -23,11 +23,11 @@ Button 组件用于生成一个原生的button标签。
 
 - 当需要在 Button 内嵌入 Icon 时，建议直接作为children 属性。可以放置在文字左边或右边
 - 通过设置shape属性为circle，可将按钮置为圆的形状。
+- 圆形按钮通常适合图标按钮
 
 # 按钮状态：ghost
 
 添加 ghost 属性即可让按钮处于幽灵状态，带有虚线边框，透明背景，同时字体颜色也会有改变
-
 
 
 # 按钮状态：不可用
@@ -49,30 +49,8 @@ Button 组件用于生成一个原生的button标签。
 ## 基本用法
 
 <Playground>
-  <Button text="Second Button"/>
+  <Button>Primary</Button>
 </Playground>
 
-<Playground>
-  {
-    ()=>(
 
-      <Button text="Third Button"/>
-    )
-  }
-  
-</Playground>
 
-<Playground>
-  {
-    ()=>{
-      const text = "My Button"
-      return (
-         <div>
-           <Button text={ text }/>
-           <Button text={ text }/>
-         </div>
-      )    
-    }
-  }
-  
-</Playground>

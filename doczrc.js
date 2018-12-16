@@ -18,10 +18,10 @@ export default {
     },
     styles: {
       h1: {
-        fontSize: 32,
+        fontSize: 26,
       },
       h2: {
-        fontSize: 22,
+        fontSize: 20,
       },
       h3: {
         fontSize: 18,
@@ -30,6 +30,9 @@ export default {
         fontSize: 16,
       },
       h5: {
+        fontSize: 14,
+      },
+      h6: {
         fontSize: 14,
       },
     },
